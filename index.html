@@ -9,7 +9,50 @@
 
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 
-    <script type="text/javacsript" src="scripts/javascript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+        $('#previous').on('click', function(){
+        // Change to the previous image
+        $('#im_' + currentImage).stop().fadeOut(1);
+        decreaseImage();
+        $('#im_' + currentImage).stop().fadeIn(1);
+        }); 
+        // window.setInterval(function() {
+        // $('#next').click();
+        // }, 2500);
+        $('#next').on('click', function(){
+        $('#im_' + currentImage).stop().fadeOut(1);
+        increaseImage();
+        $('#im_' + currentImage).stop().fadeIn(1);
+        }); 
+    
+        var currentImage = 1;
+        var totalImages = 6;
+    
+        function increaseImage() {
+        /* Increase currentImage by 1.
+        * Resets to 1 if larger than totalImages
+        */
+        ++currentImage;
+        if(currentImage > totalImages) {
+            currentImage = 1;
+        }
+        }
+        function decreaseImage() {
+        /* Decrease currentImage by 1.
+        * Resets to totalImages if smaller than 1
+        */
+        --currentImage;
+        if(currentImage < 1) {
+            currentImage = totalImages;
+        }
+        }
+        });
+
+    </script>
+  
 
     <title>Jason and Katherine May 16 2020</title>
 </head>
@@ -19,17 +62,17 @@
 <header>
     
     <div class="container">
-        <img id="logo" src="images/logo.png" alt=logo>
+        <img id="logo" src="images/logo.png" alt='logo'>
         <nav>
             <ul class="nav">
-                <li id="nav-home" class="first"> <a href="#section1"> Home </a> </li>
-                <li id="nav-ourstory"> <a href="#section2"> Our Story </a> </li>
-                <li id="nav-photos"> <a href="#section3"> Photos </a></li>
-                <li id="nav-wwh"> <a href="#section4"> Where/When/How </a></li>
-                <li id="nav-weddingparty"> <a href="#section5"> Wedding Party </a></li>
-                <li id="nav-gifts"> <a href="#section6"> Gifts </a></li>
-                <li id="nav-songreq"> <a href="#section7"> Song Request </a></li>
-                <li id="nav-rsvp" class="last"> <a href="#rsvp"> RSVP </a></li>
+                <li id> <a href="#section1"> Home </a> </li>
+                <li> <a href="#section2"> Our Story </a> </li>
+                <li> <a href="#section3"> Photos </a></li>
+                <li> <a href="#section4"> Where/When/How </a></li>
+                <li id=> <a href="#section5"> Wedding Party </a></li>
+                <li> <a href="#section6"> Gifts </a></li>
+                <li> <a href="#section7"> Song Request </a></li>
+                <li> <a href="#rsvp"> RSVP </a></li>
             </ul>
         </nav>
     </div>
@@ -74,64 +117,51 @@
     <div class="weddingparty">
         <h1> Wedding Party </h1>
         <p> We have the most wonderful wedding party on the face of the earth. These people have been to hell and back with us, and we'd rather no one else at our side on the most important day of our lives thus far. </p>
+    </div>
 
-        <div class="slideshow-container">
+    <div id="showContainer">
 
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                  <div class="numbertext">1 / 6</div>
-                  <img src="images/bryan.jpg" style="width:100%" alt="BryanB">
-                  <div class="text">Caption Text</div>
-                </div>
-              
-                <div class="mySlides fade">
-                  <div class="numbertext">2 / 6</div>
-                  <img src="images/josh.jpg" style="width:100%" alt="JoshF">
-                  <div class="text">Caption Two</div>
-                </div>
-              
-                <div class="mySlides fade">
-                  <div class="numbertext">3 / 6</div>
-                  <img src="images/joep.jpg" style="width:100%" alt="JoeP">
-                  <div class="text">Caption Three</div>
-                </div>
-
-                <div class="mySlides fade">
-                        <div class="numbertext">4 / 6</div>
-                        <img src="images/nick.jpg" style="width:100%" alt="NickC">
-                        <div class="text">Caption Three</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">5 / 6</div>
-                    <img src="images/joeg.jpg" style="width:100%" alt="JoeG">
-                    <div class="text">Caption Three</div>
-                </div>
-
-                
-                <div class="mySlides fade">
-                        <div class="numbertext">6 / 6</div>
-                        <img src="images/ben.jpg" style="width:100%" alt="BenE">
-                        <div class="text">Caption Two</div>
-                      </div>
-                      
-              
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="imageContainer" id="im_1">
+            <img src="images/bryan.jpg" alt="Co-Best Man: Bryan" />
+            <div class="caption"> Co-Best Man: Bryan </div>
         </div>
-              <br>
-              
-              <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-            <span class="dot" onclick="currentSlide(4)"></span> 
-            <span class="dot" onclick="currentSlide(5)"></span> 
-            <span class="dot" onclick="currentSlide(6)"></span> 
+
+        <div class="imageContainer" id="im_2">
+            <img src="images/josh.jpg" alt="Co-Best Man:Josh"/>
+            <div class="caption"> Co-Best Man: Josh</div>
         </div>
+
+        <div class="imageContainer" id="im_3">
+            <img src="images/joep.jpg" alt="Groomsman Joe P "/>
+            <div class="caption"> Groomsman: Joe P </div>
+        </div>
+
+        <div class="imageContainer" id="im_4">
+            <img src="images/joeg.jpg" alt="Groomsman Joe G"/>
+            <div class="caption"> Groomsman: Joe G </div>
+        </div>
+
+        <div class="imageContainer" id="im_5">
+            <img src="images/nick.jpg" alt= 'Groomans Nick'/>
+            <div class="caption"> Groomsman: Nick </div>
+        </div>
+
+        <div class="imageContainer" id="im_6">
+            <img src="images/ben.jpg" alt='Groomsan Ben' />
+            <div class="caption"> Groomsman: Ben Ernst </div>
+        </div>
+
+        <div class="navButton" id="previous">&#10094;</div>
+        <div class="navButton" id="next">&#10095;</div>
         
+    </div>
+
+        
+
+    <div class="rvsp">
+
+        <h1> this is the section for rsvp </h1>
+
 
     </div>
 </body>
