@@ -1,306 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <meta name="description" content="contact form example">
-
-   <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-
-    <!-- slide-show JS (rsvp script in external file)-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
-    <!-- SLIDESHOW -->
-    <script type="text/javascript">
-
-        $(document).ready(function() {
-        $('#previous').on('click', function(){
-        // Change to the previous image
-        $('#im_' + currentImage).stop().fadeOut(1);
-        decreaseImage();
-        $('#im_' + currentImage).stop().fadeIn(1);
-        }); 
-        // window.setInterval(function() {
-        // $('#next').click();
-        // }, 2500);
-        $('#next').on('click', function(){
-        $('#im_' + currentImage).stop().fadeOut(1);
-        increaseImage();
-        $('#im_' + currentImage).stop().fadeIn(1);
-        }); 
-    
-        var currentImage = 1;
-        var totalImages = 6;
-    
-        function increaseImage() {
-        /* Increase currentImage by 1.
-        * Resets to 1 if larger than totalImages
-        */
-        ++currentImage;
-        if(currentImage > totalImages) {
-            currentImage = 1;
-        }
-        }
-        function decreaseImage() {
-        /* Decrease currentImage by 1.
-        * Resets to totalImages if smaller than 1
-        */
-        --currentImage;
-        if(currentImage < 1) {
-            currentImage = totalImages;
-        }
-        }
-        });
-
-    </script>
-  
-    <!--BOOTSTRAP links-->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-
-        <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Katherine and Jason May 16 2020</title>
-</head>
-
-<body>
-
-<header>
-
-    <a name="section1"></a>
-    <!-- NAV MENU -->
-    <div class="container nav-container">
-        <div class="row">
-            <div class="col-1">
-                <img src="images/logo.png" alt="logo.png" class="logo">
-            </div>
-            <div class="col-11">
-                <input type="checkbox" class="nav-toggle" id="nav-toggle">
-                <nav>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--Font -->
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+        
+        <!--RSVP Form Styles-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!--CSS styles-->
+<link rel="stylesheet" href="css/styles.css">
+        <title>Wedding Maybe</title>
+    </head>
+    <body>
+        <header class="nav-header">
+             <h1 class="logo"><a href="index.html">KJ2020</a></h1>
+             <input type="checkbox" class="nav-toggle" id="nav-toggle">
+             <nav>
                 <ul class="nav list-group">
-                    <li> <a href='#'> Home  </a> </li>
-                    <li> <a href="#"> Our Story </a> </li>
-                    <li> <a href="#"> Photos </a></li>
-                    <li> <a href="#"> Where/When/How </a></li>
-                    <li> <a href="#"> Registry </a></li>
-                    <li> <a href="#"> RSVP / Song Request </a></li>
+                    <li><a href="index.html">Home </a></li>
+                    <li><a href="#ourstory">Our Story </a></li>
+                    <li><a href="#dayof">Day Of</a></li>
+                    <li><a href="#registry">Registry </a></li>
+                    <li><a href="#rsvp">RSVP </a></li>
                 </ul>
-                </nav>
-                <label for="nav-toggle" class="nav-toggle-label">
-                <span> </span>
-                </label>
-            </div>
-</header>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
 
-<main>
-    <div class="container intro-container" >
-        <div class="row">
-            <div class="col-12">
-                <img class="first" src="images/engshoot6.jpg" alt="Engagement Photo.jpg">
-            </div>
-        </div>
-        
-        <div class="row">
-           <div class="col-12">
+        <main>
+            <!-- Intro Section (Image and intro paragraph-->
+            <section class="intro">
+                <header class="intro-img">
+                    <img src="images/engshoot4.jpg" alt="photo1" class="img-int">
+                </header>
+                <div class="intro__body">
+                    <h1 class="section-title1">Katherine & Jason</h1>
+                    <h2 class="section-title">May 16 2020</h2>
 
-                <h1 class="title"> Katherine & Jason </h1>
-                <h2 class="title"> May 16, 2020 </h2> 
+                    <p> We are elated to celebrate the most important day of our lives, and we are so glad you can join us! We love all of you deeply and are so blessed to have you in our lives. </p>
+                    <p> Please check out the site for any day-of information you may need and to rsvp or request a song to keep you on the dancefloor! </p>
+                    <p> <em>While we wish there was no limit to who we could invite, funds limited us. Because of this, the wedding will be adults only. We're not even inviting Cooper. </em></p>
+                </div>
+            </section>
+
+            <!-- Our story Section-->
+           
+            <section class="aboutus">
+                <header class="aboutus__img">
+                        <a id="ourstory"></a>
+                    <img src="images/engshoot6.jpg" alt="photo2" class="aboutus__img">
+                    
+                </header>
+                <div class="aboutus__intro">
+                    <h1 class="section-title">Our Story</h1>
+                    <p> Jason and Katherine met their freshman year of college, but hadn't started dating until Junior year. After graduating from undergrad, they lived just a mile away from eachother in Springfield until Katherine graduated with her Masters Degree. </p>
+                    <p>They both then moved back home for a brief period, until Jason moved to New Jersey to finally move in with Katherine. They currently reside in High Bridge with their dog-child Cooper. </p>
+                </div>
+            </section>
+
+            <!-- Where When how-->
+            <a id="dayof"></a>
+            <img src="images/farmhouse.jpg" alt="photo3" class="farmhouse-img">
             
-                <p class="title"> We are elated to celebrate the most important day of our lives, and we are so glad you can join us! We love all of you deeply, and are so blessed to have you in our lives. Please check out the site for any day-of information you may need, or if you are dying to read about our wonderful wedding party, or request a song to keep you on the dancefloor!</p>
+            <div class="where-when-how">
+                <div class="cards">
+                    <div class="card">
+                    <section class="where">
+                        <header class="where__info">
+                            <h2 class="section-title">Where</h2>
+                        </header>
+                        <div class="where__content">
+                            <p class=where-p>Immaculate Conception Church</p>
+                            <p class=where-p> <a href="https://www.google.com/maps/place/316+Old+Allerton+Rd,+Annandale,+NJ+08801/@40.6354445,-74.8816169,17z/data=!3m1!4b1!4m5!3m4!1s0x89c38b7c1cbed561:0x54607eef608f2baf!8m2!3d40.6354445!4d-74.8794282?hl=en">316 Old Allerton Road, Annandale, NJ 08801</a>
+                            </p>
+                            <p class=where-p> <a> Reception: The Farmhouse: </p> 
+                            <p class=where-p> <a href=" https://www.google.com/maps/place/The+Farmhouse/@40.6375562,-74.9773134,15z/data=!4m5!3m4!1s0x0:0x729158b248779446!8m2!3d40.6375562!4d-74.9773134">  86 NJ-173, Hampton, NJ 08827 </a> </p>
+                        </div>
+                    </section>
+                    </div>
+                    <div class="card">
+
+                
+
+                    <section class="when">
+                        <header class="when__info">
+                            <h2 class="section-title">When</h2>
+                        </header>
+                        <div class="when__content">
+                            <p class="when-p"> Ceremony: 2:00 PM </p>
+                            <p class="when-p"> Cocktail Hour: 5:30 PM</p>
+                            <p class="when-p"> Shuttle timing TBA </p>
+                            <p class="when-p"> Reception: 6:30 PM - 11:30 PM </p>
+                        </div>
+                    </section>
+                    </div>
+                    <div class="card">
+                    <section class="how">
+                        <header class="how__info">
+                            <h2 class="section-title">How</h2>
+                        </header>
+                        <div class="how__content">
+                            <p class="how-p">Parking will be available at Immaculte Conception Church for the ceremony</p>
+                            <p class="how-p">Shuttle transportaton will be provided from the hotel to the reception and back.
+                            </p>
+                            <p class="how-p">Shuttle Schedule TBA</p>
+                        </div>
+                    </section>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    
-    <div class="container story-container">
-        <a name="section2"></a>
-        <h1 class="story">Our Story</h1>
-        <p class="story">Jason and Katherine met their freshman year of college. We... wouldn't exactly say it was love at first sight. Although, from the time they started dating their in their third year of school, Jason knew this would be permanent. Katherine and Jason kept their relationship going after they graduated, Jason moving into the professional world and Katherine staying at grad school. They went from living two doors away, to living almost an entire two miles away. The long distance was rough. Eventually, after moving again (this time into different states), Jay moved down to New Jersey to finally move in with Katherine. They currently reside in High Bridge with their dog, Cooper.</p>
-    </div>
-
-    
-
-        <div class="container info-container">
-            <div class="row titles-row">
-                <div class="col-4 where-col">
-                    <h1 class="wwh"> Where </h1>
-                      <p>Ceremony: Immaculate Conception Church</p>
-                      <p> <a href="https://www.google.com/maps/place/316+Old+Allerton+Rd,+Annandale,+NJ+08801/@40.6354445,-74.8816169,17z/data=!3m1!4b1!4m5!3m4!1s0x89c38b7c1cbed561:0x54607eef608f2baf!8m2!3d40.6354445!4d-74.8794282?hl=en">316 Old Allerton Road, Annandale, NJ 08801</a>.
-                    </p>
-                    <p> There is plenty of parking available. </p>
-                    <p> The Farmhouse:   86 NJ-173, Hampton, NJ 08827</p>
-                </div>
-                <div class="col-4 when-col">
-                    <h1 class="wwh"> When </h1>
-                    <p> Ceremony: 2:00 PM </p>
-                    <p> Cocktail Hour: 5:30 PM</p>
-                    <p> Reception: 6:30 PM - 11:30 PM </p>
-                </div>
-                <div class="col-4 how-col">
-                    <h1 class="wwh"> How </h1>
-                    <p>Parking is available at Immaculte Conception Church</p>
-                    <p>Shuttle transportaton will be provided from the hotel to the reception and back at the end of the night. </p>
-                    <p>Shuttle Schedule TBA</p>
-                </div>
-            </div>
-        </div>
-         
-    </div>
-
-    <div>
-        
-            <h1 class="hotel">Hotel Information</h1>
-        <div class="container hotel-container">
-            <div class="row hotel-row">
-                <div class="col-2">
-                </div>
-                <div class="col-4 hotel-col">
-                   
-                    <p> Hotel: Holiday Inn Clinton-Bridgewater </p>
-                    <p> Address: 111 W Main St, Clinton, NJ 08809 </p>
-                    <p class="roomblock">Room Block: Batch/Scotto</p>
+            
+            <!-- Hotel Information-->
+            <section class="hotel">
+                <header>
+                    <h1 class="section-title">Hotel Information</h1>
+                </header>
+                <div class="hotelinfo">
+                    <p class="hotel__info"> Hotel: Holiday Inn Clinton-Bridgewater </p>
+                    <p class="hotel__info"> Address: 111 W Main St, Clinton, NJ 08809 </p>
+                    <p class="hotel__info">Phone: (908) 735-5111 </p>
+                    <p class="hotel__info">Room Block: Batch/Scotto</p>
                 </div>
                 
-                <div class="col-6">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2546.1513086203854!2d-74.92274519826577!3d40.63205964564615!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9e60deafc087515e!2sHoliday+Inn+Clinton+-+Bridgewater!5e0!3m2!1sen!2sus!4v1559608764408!5m2!1sen!2sus" width="450" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div class="hotelinfo">
+                    <iframe class="hotel__info" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2546.1513086203854!2d-74.92274519826577!3d40.63205964564615!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9e60deafc087515e!2sHoliday+Inn+Clinton+-+Bridgewater!5e0!3m2!1sen!2sus!4v1559608764408!5m2!1sen!2sus" width="450" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                     <a name="section4"></a>
                 </div>
-            </div>
-        </div>
-
-
-<div class="hello">
-    <p> hey </p>
-    <p> hi </p>
-    <p> hello </p>
-<div>
-
-    <div class="container engphoto-container">
-        <div class="row">
-            <h1> Engagement Photos </h1>
-        </div>
-        <div clas="row">
-            <p> Photography Credit: <a href="http://jilllynnphotography.com/"> Jill Lynn Photography </a></p>
-        </div>
-
-            <div class="row">
-                <div class="col-1">
-                    <div class="navButton" id="previous">&#10094;</div>
-                </div>
-                <div class="col-10">
-                    <div class="imageContainer" id="im_1">
-                        <img src="images/engagementshoot1.jpg" alt="Engagement Shoot 1" />
-                        <div class="caption"> Co-Best Man: Bryan </div>
-                    </div>
-
-                    <div class="imageContainer" id="im_2">
-                        <img src="images/engshoot2.jpg" alt="Engagement Shoot 2"/>
-                        <div class="caption"> Co-Best Man: Josh</div>
-                    </div>
-
-                    <div class="imageContainer" id="im_3">
-                        <img src="images/engshoot3.jpg" alt="Engagement Shoot 3 "/>
-                        <div class="caption"> Groomsman: Joe P </div>
-                    </div>
-
-                    <div class="imageContainer" id="im_4">
-                        <img src="images/engshoot4.jpg" alt="Engagement Shoot 4"/>
-                        <div class="caption"> Groomsman: Joe G </div>
-                    </div>
-
-                    <div class="imageContainer" id="im_5">
-                        <img src="images/engshoot6.jpg" alt= 'Engagement Shoot 5'/>
-                        <div class="caption"> Groomsman: Nick </div>
-                    </div>
-
-                    <div class="imageContainer" id="im_6">
-                        <img src="images/engshoot7.jpg" alt='Engagement Shoot 7' />
-                        <div class="caption"> Groomsman: Ben Ernst </div>
-                    </div>
-                </div>
-                <div class="col-1">
-                    <div class="navButton" id="next">&#10095;</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container rsvp-container">
-        <div class="row" id="note-rsvp">
-            <div class="col-12">
-                <h3 class="note-rsvp">Please RSVP below with the RSVP code listed on your invitation!</h3>
-            </div>
-        </div>
-
-        <div class="row rsvp-form-row">
-            <div class="col-4">
-            </div>
-            <div class="col-4">
-                <div class="container"
-                <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
                 
+            </section>
 
-                <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
-                action="https://script.google.com/macros/s/AKfycbxzbsilIDxykx9Cfh8mVOpx51MJlj5dh5gvh9W1/exec">
+            <a id="rsvp"></a>
+
+            <!-- RSVP -->
+            <section class="rsvp">
+                <h1 class="section-title">RSVP</h1>
+                <div class="formstuff">
+                        <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+                        action="https://script.google.com/macros/s/AKfycbxzbsilIDxykx9Cfh8mVOpx51MJlj5dh5gvh9W1/exec">
+                        
+        
+                        <div class="form-elements">
+                        <fieldset class="pure-group">
+                            <label for="name">Names: </label>
+                            <input id="name" name="name" placeholder="Names of Guest(s) Attending" />
+                        </fieldset>
+        
+                        <fieldset class="pure-group">
+                            <label for="attending">Attending? (Yes/No): </label>
+                            <textarea id="attending" name="attending" rows="1"
+                            placeholder="Wouldn't Miss It!"></textarea>
+                        </fieldset>
+        
+                        <fieldset class="pure-group">
+                            <label for="email"><em>Your</em> Email Address:</label>
+                            <input id="email" name="email" type="email" value=""
+                            required placeholder="your.name@email.com"/>
+                        </fieldset>
+        
+                        <fieldset class="pure-group">
+                            <label for="song">A song that will keep you dancing: </label>
+                            <input id="song" name="song" placeholder="Raining Blood- Slayer" />
+                        </fieldset>
+        
+                        <fieldset class="pure-group honeypot-field">
+                            <label for="honeypot">RSVP Code:</label>
+                            <input id="honeypot" type="text" name="honeypot" value="" />
+                        </fieldset>
+        
+                        <button class="button-success pure-button button-xlarge">
+                            <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+                        </div>
+        
+                        <!-- Customise the Thankyou Message People See when they submit the form: -->
+                        <div class="thankyou_message" style="display:none">
+                        <h2><em>Thank you!</em> We cannot wait to see you!</h2>
+                        </div>
+        
+                        </form>
+        
+                        <!-- Submit the Form to Google Using "AJAX" -->
+                        <script data-cfasync="false" src="scripts/rsvpjs.js"></script>
+                        <!-- END -->
+                </div>
+            </section>
+
+             <!-- Registry -->
+             <a id="registry"></a>
+            <section class="gifts">
+                <header>
+                    <h1 class="section-title">Registry</h1>
+                </header>
+                <div class="registry">
+                    <a class="zola-registry-embed" href="www.zola.com/registry/katherineandjaymay16" data-registry-key="katherineandjaymay16">Our Zola Wedding Registry</a><script>!function(e,t,n){var s,a=e.getElementsByTagName(t)[0];e.getElementById(n)||(s=e.createElement(t),s.id=n,s.async=!0,s.src="https://widget.zola.com/js/widget.js",a.parentNode.insertBefore(s,a))}(document,"script","zola-wjs");</script></<a>
+                </div>
+            </section>
+
+           
+
+            <footer>
                 
+                
+            <section class="btn-social">
+                    <div class="btn-group">
+                        <a href="mailto:jayjscotto@gmail.com" class="btn btn-primary">Send Us A Note</a>
+                        <a href="https://www.instagram.com/doctorjayscotto/" class="btn btn-primary">Jay's Instagram</a>
+                        <a href="https://www.instagram.com/kbatch24/" class="btn btn-primary">Katherine's Instagram</a>
+                        <a href="https://www.instagram.com/explore/tags/itscottobelove/" class="btn btn-primary">#ItScottoBeLove</a>
+                    </div>
+                </section>
+                <!--
+                <ul class="footer-nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Where/When/How</a></li>
+                            <li><a href="#">Registry</a></li>
+                            <li><a href="#">RSVP</a></li>
+                </ul>
+                -->
+                <h1 class="logo"><a href="index.html">KJ2020</a></h1>
+    
 
-                <div class="form-elements">
-                <fieldset class="pure-group">
-                    <label for="name">Names: </label>
-                    <input id="name" name="name" placeholder="Names of Guest(s) Attending" />
-                </fieldset>
+            </footer>
 
-                <fieldset class="pure-group">
-                    <label for="attending">Attending? (Yes/No): </label>
-                    <textarea id="attending" name="attending" rows="1"
-                    placeholder="Wouldn't Miss It!"></textarea>
-                </fieldset>
 
-                <fieldset class="pure-group">
-                    <label for="email"><em>Your</em> Email Address:</label>
-                    <input id="email" name="email" type="email" value=""
-                    required placeholder="your.name@email.com"/>
-                </fieldset>
-
-                <fieldset class="pure-group">
-                    <label for="song">A song that is sure to get you on the dancefloor...: </label>
-                    <input id="song" name="song" placeholder="Raining Blood- Slayer" />
-                </fieldset>
-
-                <fieldset class="pure-group honeypot-field">
-                    <label for="honeypot">RSVP Code:</label>
-                    <input id="honeypot" type="text" name="honeypot" value="" />
-                </fieldset>
-
-                <button class="button-success pure-button button-xlarge">
-                    <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
-                </div>
-
-                <!-- Customise the Thankyou Message People See when they submit the form: -->
-                <div class="thankyou_message" style="display:none">
-                <h2><em>Thank you!</em> We cannot wait to see you!</h2>
-                </div>
-
-                </form>
-
-                <!-- Submit the Form to Google Using "AJAX" -->
-                <script data-cfasync="false" src="rsvpjs.js"></script>
-                <!-- END -->
-            </div>
-            <div class="col-4">
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid contact-container">
-        <p> Contact: <a href="mailto:jayjscotto@gmail.com"> jayjscotto@gmail.com </a></p>
-    </div>
-</main>
-</body>
+        </main>
+    </body>
+ 
 </html>
-
-
