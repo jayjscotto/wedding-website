@@ -1,0 +1,505 @@
+
+
+h1, h2, h3, h4 {
+    font-family: 'Crimson Text', serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --background: rgba(255, 255, 255, .95);
+    --ff-serif:  "Work Sans", serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: var(--ff-serif)!important;
+    color: var(--black);
+    font-size: 1.125rem;
+}
+
+body
+{
+    margin: 0;
+}
+
+
+/* Typography */
+h1.section-title1 {
+    font-size: 4rem;
+}
+
+h1.section-title {
+    font-size:3rem;
+    padding-bottom: 1rem;
+}
+
+h1, h2, h3 {
+    line-height:0.8;
+    text-align: center;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+h2 {
+    line-height: 2;
+}
+
+p {
+    margin-bottom: 0.85em;
+}
+
+/* for logo font family */
+.logo {
+    text-align: center;
+    padding-bottom: 0.35em;
+    padding-top: em;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+   
+}
+
+
+/* Navigation */
+
+header.nav-header {
+    background: var(--background);
+    text-align: center;
+    width:100%;
+    position:fixed;
+    z-index: 999;
+   
+}
+
+
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    background: var(--background);
+    left: 0;
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 300ms ease-in-out;
+    
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+    font-family: 'Crimson Text', serif;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.125em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+
+nav a:hover{
+    color:#000000
+}
+
+.nav-toggle:checked ~ nav {
+   transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle {
+    display:none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top:0;
+    left:0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #000000;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+
+/* Homepage Styles */
+img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 1em;
+    justify-content: center;
+}
+
+header.nav-header {
+    padding-top: 6 rem;
+}
+
+section {
+    margin: 0 auto;
+    padding-top: 0.25em;
+    padding: 1em;
+    justify-content: center !important;
+}
+
+.section-title {
+    padding-bottom: .05em;
+}
+
+.intro, .aboutus {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.aboutus__img,
+.hotel {
+    margin: auto;
+}
+
+
+.hotel__info {
+    max-width: 100%;
+}
+
+
+/* Cards */
+.farmhouse-img {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.where-when-how {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.where,
+.when,
+.how {
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.075); 
+    margin: 1.5em 1em;
+    justify-content: center;
+
+}
+
+
+.where-p,
+.when-p,
+.how-p {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Footer Button Social */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+.btn {
+    padding: .75em 0.5em;
+    text-decoration: none;
+    display: block;
+    margin: 0.75em;
+    color: #000000;
+    text-align: center;
+    border-radius: 0.35em;
+}
+
+.btn-primary {
+    background: #E6E6E6;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    opacity: 0.65;
+}
+
+.ig-logo {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+
+
+/* Footer */
+footer {
+    padding: 1em;
+    margin-top: 3em auto; 
+}
+/*
+.footer-nav {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+*/
+
+footer a {
+    color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header.nav-header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(550px, 3fr) 1fr;
+    }
+
+    nav {
+        
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav a {
+        opacity: 1;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        margin-bottom: 0;
+    }
+
+
+    .logo {
+        grid-column: 2 / 3;
+    }
+
+    section {
+        padding: 1em;
+    }
+
+    .section-title {
+        margin: .5em auto;
+    }
+
+
+
+    .logo {
+        padding-top: 1rem;
+        align-items: center;
+    }
+
+    .intro {
+        flex-direction: row;
+        align-items: center;
+    }
+
+
+    .intro-img,
+    .intro__body {
+        flex: 0 1 50%;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        padding: 3em;
+    }
+ 
+    .intro-img {
+        align-content: right;
+        max-width: 35rem;
+        display: flex;
+        padding: 0;
+    }
+        
+    
+
+    p {
+        text-align: justify;
+    }
+
+    .farmhouse-img {
+        margin: auto;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .card + .card {
+        margin-left: 0.125em;
+
+    }
+
+    .card {
+        margin: 0;
+        flex: 0 1 33%;
+        height: inherit;
+    }
+
+    .hotel {
+        margin: 1.5em 1em;
+        text-align: center;
+        justify-content: center;
+        max-width: 35em;
+        margin: auto;
+        padding-bottom: 3em;
+    }
+
+    p.hotel__info {
+        text-align: center;
+    }
+
+    
+    .rsvp {
+        border-radius: 1em;
+        overflow: hidden;
+        box-shadow: 0 0 1em rgba(0, 0, 0, 0.075); 
+        margin: 1.5em 1em;
+        justify-content: center;
+        max-width: 35em;
+        margin: auto;
+        padding-top: 3em;
+    }
+    
+
+    .btn-group {
+        flex-direction: row;
+        flex: 0 1 25%;
+    }
+
+   
+    
+}
+
+@media only screen and (min-width: 1024px) {
+
+    li {
+        font-size: 1.15rem;
+    }
+
+    .logo {
+        grid-column: 1 / 2;
+        align-items: center;
+    }
+
+    header.nav-header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(550px, 3fr) 0.5fr;
+    }
+
+    nav a::before{ 
+        content:'';
+        display: block;
+        height: 2px;
+        background: black;
+        position: absolute;
+        bottom: -0.05em;
+        left: 0;
+        right: 0;
+        transform: scale(0,1);
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        transform: scale(1,1);
+    }
+
+    nav a {
+        position: relative;
+    }
+
+
+    .aboutus__intro {
+        max-width: 45rem;
+        align-self: center;
+    }
+
+    .intro {
+        padding-top: 5rem;
+    }
+
+    .registry {
+        border-radius: 1em;
+        overflow: hidden;
+        box-shadow: 0 0 1em rgba(0, 0, 0, 0.075); 
+        margin: 1.5em 1em;
+        justify-content: center;
+        margin: auto;
+        max-width: 70rem;
+    }
+    
+    .intro__body {
+        max-width: 35rem;
+    }
+
+    .rsvp div {
+        margin: auto;
+    }
+}
+
