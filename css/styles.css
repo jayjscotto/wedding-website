@@ -245,6 +245,15 @@ section {
     text-align: left;
 }
 
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.registry {
+    margin: 2em;
+}
+
 /* Footer Button Social */
 .btn-group {
     display: flex;
@@ -415,6 +424,13 @@ footer a {
         text-align: center;
     }
 
+    .reg-a {
+        color: black;
+    }
+
+    .reg-a:hover {
+        color: red;
+    }
     
     .rsvp {
         border-radius: 1em;
@@ -484,16 +500,7 @@ footer a {
         padding-top: 5rem;
     }
 
-    .registry {
-        border-radius: 1em;
-        overflow: hidden;
-        box-shadow: 0 0 1em rgba(0, 0, 0, 0.075); 
-        margin: 1.5em 1em;
-        justify-content: center;
-        margin: auto;
-        max-width: 70rem;
-    }
-    
+
     .intro__body {
         max-width: 35rem;
     }
