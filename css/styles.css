@@ -179,6 +179,10 @@ img {
     justify-content: center;
 }
 
+img.postponed {
+    margin: 0 auto;
+}
+
 header.nav-header {
     padding-top: 6 rem;
 }
@@ -210,6 +214,7 @@ section {
 
 .hotel__info {
     max-width: 100%;
+    margin: 1em auto;
 }
 
 
