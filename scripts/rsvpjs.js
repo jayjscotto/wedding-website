@@ -1,4 +1,4 @@
-(function() {
+function() {
 
   function validateHuman(honeypot) {
     if (honeypot) {  //if hidden form filled up
@@ -115,4 +115,4 @@
       buttons[i].disabled = true;
     }
   }
-})();
+}
