@@ -445,9 +445,15 @@ footer a {
         justify-content: center;
         max-width: 35em;
         margin: auto;
-        padding-top: 3em;
+        padding-top: 1em;
+        padding-bottom: 2em;
+        text-align: center;
     }
+
     
+    #em {
+        font-weight: 500;
+    }
 
     .btn-group {
         flex-direction: row;
